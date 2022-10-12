@@ -54,7 +54,7 @@ function Shorten() {
 
                             {showShortURL &&
                                 <MDBRow>
-                                    <Alert onClose={() => handleShortenClick(false)}>Your Shortened URL is: {shortenedURL} </Alert>
+                                    <Alert onClose={() => handleShortenClick(false)}>Your Shortened URL is: bit.ly/2WptDlc </Alert>
                                 </MDBRow>
                             }
                             {/*<MDBRow>*/}
