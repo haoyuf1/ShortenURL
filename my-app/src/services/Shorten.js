@@ -7,7 +7,8 @@ import {
     MDBCol,
     MDBCard,
     MDBCardBody,
-    MDBInput
+    MDBInput,
+    MDBIcon
 }
     from 'mdb-react-ui-kit';
 
@@ -53,35 +54,29 @@ function Shorten() {
                             </MDBRow>
 
                             {showShortURL &&
-                                <MDBRow>
+                                <MDBRow className='mb-3'>
                                     <Alert onClose={() => handleShortenClick(false)}>Your Shortened URL is: bit.ly/2WptDlc </Alert>
                                 </MDBRow>
                             }
-                            {/*<MDBRow>*/}
-                            {/*    <MDBCol col='6'>*/}
-                            {/*        <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Shortened URL' id='shortURL' type='url' size="lg"/>*/}
-                            {/*    </MDBCol>*/}
 
-                            {/*    <MDBCol col='6'>*/}
-                            {/*        <MDBBtn outline className='mx-5 px-5 w-10 clipboard' data-mdb-clipboard-target='#shortURL' color='white' size='lg'>*/}
-                            {/*            copy*/}
-                            {/*        </MDBBtn>*/}
-                            {/*    </MDBCol>*/}
-                            {/*</MDBRow>*/}
 
-                            {/*<div className='d-flex flex-row mt-3 mb-5'>*/}
-                            {/*    <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>*/}
-                            {/*        <MDBIcon fab icon='facebook-f' size="lg"/>*/}
-                            {/*    </MDBBtn>*/}
+                            <p className='mb-1'> Share With: </p>
 
-                            {/*    <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>*/}
-                            {/*        <MDBIcon fab icon='twitter' size="lg"/>*/}
-                            {/*    </MDBBtn>*/}
+                            <div className='d-flex flex-row mt-1 mb-5'>
 
-                            {/*    <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>*/}
-                            {/*        <MDBIcon fab icon='google' size="lg"/>*/}
-                            {/*    </MDBBtn>*/}
-                            {/*</div>*/}
+
+                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                    <MDBIcon fab icon='facebook-f' size="lg"/>
+                                </MDBBtn>
+
+                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                    <MDBIcon fab icon='twitter' size="lg"/>
+                                </MDBBtn>
+
+                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                    <MDBIcon fab icon='google' size="lg"/>
+                                </MDBBtn>
+                            </div>
 
                         </MDBCardBody>
                     </MDBCard>
