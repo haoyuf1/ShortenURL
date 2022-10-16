@@ -7,8 +7,8 @@ import {
     MDBCol,
     MDBInput,
     MDBCardBody,
-    MDBCard
-
+    MDBCard,
+    MDBIcon
 }
     from 'mdb-react-ui-kit';
 
@@ -47,6 +47,20 @@ function Registration() {
                                 Login
                             </MDBBtn>
 
+                            <div className='d-flex flex-row mt-3 mb-5'>
+                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                    <MDBIcon fab icon='facebook-f' size="lg"/>
+                                </MDBBtn>
+
+                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                    <MDBIcon fab icon='twitter' size="lg"/>
+                                </MDBBtn>
+
+                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                    <MDBIcon fab icon='google' size="lg"/>
+                                </MDBBtn>
+                            </div>
+
                             <div>
                                 <p className="mt-5">Don't have an account? <a href="#!" onClick={() => handleSignIn(false)} className="text-white-50 fw-bold">Sign Up</a>
                                 </p>
@@ -66,6 +80,7 @@ function Registration() {
                         <MDBBtn onClick={toMainPage} outline className='mx-2 px-5' color='white' size='lg'>
                             Sign Up
                         </MDBBtn>
+
 
                         <div>
                             <p className="mt-5">Already have an account? <a href="#!" onClick={() => handleSignIn(true)} className="text-white-50 fw-bold">Sign In</a>
