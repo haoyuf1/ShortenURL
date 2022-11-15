@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { FacebookShareButton, TwitterShareButton, EmailShareButton } from "react-share";
 import {Alert} from "@mui/material";
 import {
     MDBBtn,
@@ -62,21 +63,30 @@ function Shorten() {
 
                             <p className='mb-1'> Share With: </p>
 
-                            <div className='d-flex flex-row mt-1 mb-5'>
-
-
-                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                            <MDBRow>
+                                <MDBCol size='md'>
+                                <FacebookShareButton
+                                    url={"bit.ly/2WptDlc"}
+                                >
                                     <MDBIcon fab icon='facebook-f' size="lg"/>
-                                </MDBBtn>
+                                </FacebookShareButton>
+                                </MDBCol>
 
-                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                <MDBCol size='md'>
+                                <TwitterShareButton
+                                    url={"bit.ly/2WptDlc"}
+                                >
                                     <MDBIcon fab icon='twitter' size="lg"/>
-                                </MDBBtn>
-
-                                <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
+                                </TwitterShareButton>
+                                </MDBCol>
+                                
+                                <MDBCol size='md'>
+                                <EmailShareButton
+                                    url={"bit.ly/2WptDlc"}>
                                     <MDBIcon fab icon='google' size="lg"/>
-                                </MDBBtn>
-                            </div>
+                                </EmailShareButton>
+                                </MDBCol>
+                            </MDBRow>
 
                         </MDBCardBody>
                     </MDBCard>
